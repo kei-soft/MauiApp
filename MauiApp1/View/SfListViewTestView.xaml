@@ -10,13 +10,29 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <SearchBar x:Name="filterText"
-               HeightRequest="40"
-               Placeholder="Search here to filter"
-               TextChanged="OnFilterTextChanged"/>
-        <syncfusion:SfListView x:Name="listView" Grid.Row="1" 
-                           ItemSize="100" 
-                           ItemsSource="{Binding BookInfo}">
+        <SearchBar 
+            x:Name="filterText"
+            HeightRequest="40"
+            Placeholder="Search here to filter"
+            TextChanged="OnFilterTextChanged"/>
+        <syncfusion:SfListView
+            Grid.Row="1" 
+            x:Name="listView"
+            ItemSize="100" 
+            ItemsSource="{Binding BookInfo}"
+            SelectionBackground="Skyblue">
+            <syncfusion:SfListView.SelectedItemTemplate>
+                <DataTemplate>
+                    <Grid x:Name="grid" BackgroundColor="RoyalBlue">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*" />
+                            <RowDefinition Height="0.6*" />
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding BookName}"  FontAttributes="Bold" TextColor="Black" FontSize="25"  />
+                        <Label Grid.Row="1" Text="{Binding BookDescription}"  TextColor="White" FontSize="16"/>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.SelectedItemTemplate>
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
