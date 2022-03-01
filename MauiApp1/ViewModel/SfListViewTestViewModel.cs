@@ -1,11 +1,6 @@
 ﻿using MauiApp1.Model;
 
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiApp1.ViewModel
 {
@@ -18,7 +13,6 @@ namespace MauiApp1.ViewModel
             get { return bookInfo; }
             set { this.bookInfo = value; }
         }
-
         public SfListViewTestViewModel()
         {
             bookInfo = new ObservableCollection<BookInfo>();

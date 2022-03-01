@@ -59,7 +59,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="19.4.53-preview" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="19.4.54-preview" />
 	</ItemGroup>
 
 	<ItemGroup>

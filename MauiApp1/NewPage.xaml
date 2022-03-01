@@ -4,15 +4,22 @@
              x:Class="MauiApp1.NewPage"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              Title="NewPage"
+             Padding="10,10,10,100"
              BackgroundColor="White">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="0, 20, 0, 0" />
-            <On Platform="Android" Value="10, 10, 10, 80" />
+            <On Platform="iOS" Value="0, 10, 0, 0" />
+            <On Platform="Android" Value="10, 10, 10, 10" />
         </OnPlatform>
     </ContentPage.Padding>
-    <StackLayout>
-        <Label Text="SfListView Kei Soft 강준"
+    <StackLayout >
+        <StackLayout.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0, 10, 0, 0" />
+                <On Platform="Android" Value="10, 10, 10, 10" />
+            </OnPlatform>
+        </StackLayout.Margin>
+        <Label Text="Kei Soft 강준(https://github.com/kei-soft)"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         <Button x:Name="sfListViewButton" Text="SfListView" Clicked="sfListViewButton_Clicked"/>
