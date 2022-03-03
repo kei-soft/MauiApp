@@ -3,20 +3,42 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:MauiApp1.Defines"
              Title="SfListView"
              BackgroundColor="White">
+    <ContentPage.Resources>
+        <x:Double x:Key="fontSize">24</x:Double>
+        <OnPlatform x:Key="textColor" x:TypeArguments="Color">
+            <On Platform="iOS" Value="Red" />
+            <On Platform="Android" Value="LightGray" />
+            <On Platform="UWP" Value="#80FF80" />
+        </OnPlatform>
+    </ContentPage.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Label 
+            Text="{x:Static local:Constants.SfListViewTitle}"
+               FontSize="{StaticResource fontSize}" 
+               TextColor="{StaticResource textColor}" 
+               HorizontalOptions="Center" 
+               Margin="5">
+            <!--<Label.Text>
+                <x:Static Member="local:Constants.SfListViewTitle"/>
+            </Label.Text>-->
+        </Label>
         <SearchBar 
             x:Name="filterText"
             HeightRequest="40"
+            Grid.Row="1" 
             Placeholder="Search here to filter"
             TextChanged="OnFilterTextChanged"/>
         <syncfusion:SfListView
-            Grid.Row="1" 
+            Grid.Row="2" 
             x:Name="listView"
             ItemSize="100" 
             ItemsSource="{Binding BookInfo}"
