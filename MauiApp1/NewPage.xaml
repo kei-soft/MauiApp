@@ -22,6 +22,13 @@
         <Label Text="Kei Soft 강준(https://github.com/kei-soft)"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+        
+        <Slider x:Name="slider" Minimum="0" Maximum="100" Value="0" Background="Gray"/>
+        <Label  
+            Text="{Binding Source={x:Reference slider}, Path=Value}"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand"/>
+
         <Button x:Name="sfListViewButton" Text="SfListView" Clicked="sfListViewButton_Clicked"/>
     </StackLayout>
 </ContentPage>
