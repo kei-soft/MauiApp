@@ -20,15 +20,15 @@
             </OnPlatform>
         </StackLayout.Margin>
         <Label Text="Kei Soft 강준(https://github.com/kei-soft)"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        
-        <Slider x:Name="slider" Minimum="0" Maximum="100" Value="0" Background="Gray"/>
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+        <Slider x:Name="slider" Minimum="0" Maximum="100" Value="0" Background="Gray" VerticalOptions="Center"/>
         <Label  
             Text="{Binding Source={x:Reference slider}, Path=Value}"
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="Center" 
             HorizontalOptions="CenterAndExpand"/>
-
-        <Button x:Name="sfListViewButton" Text="SfListView" Clicked="sfListViewButton_Clicked"/>
+        <Entry Text="Remove Android Entry underline" TextColor="Black" VerticalOptions="Center"/>
+        <Button x:Name="sfListViewButton" Text="SfListView" Clicked="sfListViewButton_Clicked" Margin="5"/>
+        <Button x:Name="testButton" Text="Test" Clicked="testButton_Clicked" Margin="5"/>
     </StackLayout>
 </ContentPage>

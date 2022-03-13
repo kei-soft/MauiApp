@@ -1,6 +1,7 @@
 using MauiApp1.Model;
 using MauiApp1.ViewModel;
 
+using Syncfusion.Maui.DataSource;
 using Syncfusion.Maui.GridCommon.ScrollAxis;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.ListView.Helpers;
@@ -36,6 +37,20 @@ public partial class SfListViewTestView : ContentPage
 		// 목록 끝에 도달한 경우 알림 처리를 위함 - listview 아래 위로 공간이 많이 생기게 됨 버그같음
 		//visualContainer = this.listView.GetVisualContainer();
 		//visualContainer.ScrollRows.Changed += ScrollRows_Changed;
+
+		// 아이템 정렬
+		listView.DataSource.SortDescriptors.Add(new SortDescriptor { PropertyName = "BookName", Direction = ListSortDirection.Ascending });
+
+		// 그룹핑
+		listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
+		{
+			PropertyName = "BookName",
+			KeySelector = (object obj1) =>
+			{
+				var item = (obj1 as BookInfo);
+				return item.BookName[0].ToString();
+			}
+		});
 	}
 	
 	/// <summary>

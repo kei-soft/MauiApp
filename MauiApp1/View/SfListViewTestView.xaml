@@ -5,6 +5,7 @@
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:local="clr-namespace:MauiApp1.Defines"
+             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"
              Title="SfListView"
              BackgroundColor="White">
     <ContentPage.Resources>
@@ -15,7 +16,7 @@
             <On Platform="UWP" Value="#80FF80" />
         </OnPlatform>
     </ContentPage.Resources>
-    <Grid>
+    <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -27,19 +28,19 @@
             TextColor="{StaticResource textColor}" 
             HorizontalOptions="Center" 
             Margin="5">
-            --><!--<Label.Text>
+            <Label.Text>
                 <x:Static Member="local:Constants.SfListViewTitle"/>
-            </Label.Text>--><!--
+            </Label.Text>
         </Label>-->
         <SearchBar 
             x:Name="filterText"
             HeightRequest="40"
             Grid.Row="0" 
-            Placeholder="{Binding Source={RelativeSource Self}, Path=BackgroundColor}"
+            Placeholder="Search.."
             TextChanged="OnFilterTextChanged"
-            TextColor="Black"
-            BackgroundColor="Gray"/>
+            TextColor="Black"/>
         <syncfusion:SfListView
+            Margin="5"
             Grid.Row="1" 
             x:Name="listView"
             ItemSize="100" 
@@ -72,6 +73,33 @@
                     </Grid>
                 </DataTemplate>
             </syncfusion:SfListView.ItemTemplate>
+            <!--<syncfusion:SfListView.DataSource>
+                <data:DataSource>
+                    <data:DataSource.GroupDescriptors>
+                        <data:GroupDescriptor PropertyName="BookName"/>
+                    </data:DataSource.GroupDescriptors>
+                </data:DataSource>
+            </syncfusion:SfListView.DataSource>-->
+            <syncfusion:SfListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid BackgroundColor="#E4E4E4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start"
+                   VerticalOptions="Center" >
+                            <Label Text="  " TextColor="Black" />
+                            <Label Text="{Binding Key}" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+                            <Label Text="{Binding Count}" TextColor="Blue" FontAttributes="Bold"/>
+                            <Label Text=" Count " TextColor="Black" />
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.GroupHeaderTemplate>
         </syncfusion:SfListView>
     </Grid>
 </ContentPage>

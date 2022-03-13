@@ -19,5 +19,10 @@ public partial class NewPage : ContentPage
     private void sfListViewButton_Clicked(object sender, EventArgs e)
     {
 		Navigation.PushAsync(new SfListViewTestView());
-    } 
+    }
+
+    private void testButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new TestView());
+    }
 }
