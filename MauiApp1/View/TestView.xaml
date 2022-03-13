@@ -7,7 +7,7 @@
              Title="TestView">
     <StackLayout Margin="10">
         <Label Text="A" TextColor="Black"/>
-        <Label Text="{Binding Title}" FontSize="20" TextColor="Black"/>
+        <Label Text="{Binding Title}" FontSize="20" TextColor="{x:OnPlatform iOS=Black, Android=Blue, UWP=Gray}"/>
         <Label Text="B" TextColor="Black"/>
     </StackLayout>
 </ContentPage>

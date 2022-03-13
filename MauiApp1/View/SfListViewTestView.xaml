@@ -73,13 +73,6 @@
                     </Grid>
                 </DataTemplate>
             </syncfusion:SfListView.ItemTemplate>
-            <!--<syncfusion:SfListView.DataSource>
-                <data:DataSource>
-                    <data:DataSource.GroupDescriptors>
-                        <data:GroupDescriptor PropertyName="BookName"/>
-                    </data:DataSource.GroupDescriptors>
-                </data:DataSource>
-            </syncfusion:SfListView.DataSource>-->
             <syncfusion:SfListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <Grid BackgroundColor="#E4E4E4">

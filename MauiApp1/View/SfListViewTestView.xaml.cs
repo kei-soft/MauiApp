@@ -45,9 +45,9 @@ public partial class SfListViewTestView : ContentPage
 		listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 		{
 			PropertyName = "BookName",
-			KeySelector = (object obj1) =>
+			KeySelector = (object bookInfo) =>
 			{
-				var item = (obj1 as BookInfo);
+				var item = (bookInfo as BookInfo);
 				return item.BookName[0].ToString();
 			}
 		});
