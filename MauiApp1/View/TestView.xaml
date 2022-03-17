@@ -5,12 +5,12 @@
              xmlns:local2="clr-namespace:MauiApp1.ViewModel"
              Title="TestView">
     <!--x:DataType="local2:TestViewModel"-->
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <local2:TestViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <StackLayout Margin="10">
         <Label Text="{Binding Title}" FontSize="20" TextColor="{x:OnPlatform iOS=Black, Android=Blue, UWP=Gray}"/>
-        <Button Text="Command" Command="{Binding TestCommand}"/>
+        <Button Text="Test Command" Command="{Binding TestCommand}"/>
         <Entry x:Name="passwordEntry" IsPassword="True" Text="mvvm"/>
         <Button  Text="Param Command" Command="{Binding ParameterCommand}" CommandParameter="{Binding Source={x:Reference passwordEntry}, Path=Text}"/>
         <Entry Text="{Binding ParamValue}" />
