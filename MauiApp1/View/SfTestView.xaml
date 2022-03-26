@@ -9,19 +9,26 @@
              BackgroundColor="White">
 
     <StackLayout Margin="10">
-        <Label Text ="SfBadgeView" VerticalTextAlignment="Center" FontSize="18"/>
-
+        <Label Text ="SfBadgeView" VerticalTextAlignment="Center" FontSize="15" FontAttributes="Bold"/>
         <syncfusionCore:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20" Margin="5">
             <syncfusionCore:SfBadgeView.Content>
-                <Button Text="Primary" WidthRequest="200"  HeightRequest="60" HorizontalOptions="Center"/>
+                <Button Text="Badge" WidthRequest="200"  HeightRequest="60" HorizontalOptions="Center"/>
             </syncfusionCore:SfBadgeView.Content>
             <syncfusionCore:SfBadgeView.BadgeSettings>
-                <syncfusionCore:BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif" Stroke="Blue" BorderWidth="2" Type="Info" CornerRadius="5,5,5,5" Position="BottomRight">
+                <syncfusionCore:BadgeSettings 
+                    FontSize="15" 
+                    FontAttributes="Bold" 
+                    FontFamily="serif" 
+                    Stroke="Blue" 
+                    BorderWidth="2" 
+                    Type="Info" 
+                    CornerRadius="5,5,5,5" 
+                    Position="BottomRight">
                 </syncfusionCore:BadgeSettings>
             </syncfusionCore:SfBadgeView.BadgeSettings>
         </syncfusionCore:SfBadgeView>
-
-        <Label Text ="SfEffectsView" VerticalTextAlignment="Center" FontSize="18"/>
+        
+        <Label Text ="SfEffectsView" VerticalTextAlignment="Center" FontSize="15" FontAttributes="Bold"/>
         <syncfusionCore:SfEffectsView 
             Margin="5"
             TouchDownEffects="Ripple">
@@ -46,11 +53,7 @@
             Margin="5"
             TouchDownEffects="Ripple,Rotation"
             Angle="180">
-            <Label Text ="Rotation" HeightRequest="60" VerticalTextAlignment="Center"></Label>
+            <Label Text ="Ripple,Rotation" HeightRequest="60" VerticalTextAlignment="Center"></Label>
         </syncfusionCore:SfEffectsView>
-
-
     </StackLayout>
-    
-    
 </ContentPage>

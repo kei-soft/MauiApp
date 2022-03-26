@@ -24,7 +24,7 @@ public static class MauiProgram
 
 		builder.ConfigureSyncfusionListView();
 
-		// SfBadgeView
+		// SfBadgeView, SfEffectsView
 		builder.ConfigureSyncfusionCore();
 
 #if ANDROID
@@ -66,8 +66,6 @@ public static class MauiProgram
 #endif
 			}
 		});
-
-
 
 		return builder.Build();
 	}
