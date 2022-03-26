@@ -29,6 +29,7 @@
             HorizontalOptions="CenterAndExpand"/>
         <Entry Text="Remove Android Entry underline" TextColor="Black" VerticalOptions="Center"/>
         <Button x:Name="sfListViewButton" Text="SfListView" Clicked="sfListViewButton_Clicked" Margin="5"/>
-        <Button x:Name="testButton" Text="Test" Clicked="testButton_Clicked" Margin="5"/>
+        <Button x:Name="testButton" Text="MVVM" Clicked="testButton_Clicked" Margin="5"/>
+        <Button x:Name="sfTestButton" Text="Sf Test" Clicked="sfTestButton_Clicked" Margin="5"/>
     </StackLayout>
 </ContentPage>

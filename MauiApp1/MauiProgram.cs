@@ -3,6 +3,7 @@
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Platform;
 
+using Syncfusion.Maui.Core.Hosting;
 using Syncfusion.Maui.ListView.Hosting;
 
 namespace MauiApp1;
@@ -23,6 +24,8 @@ public static class MauiProgram
 
 		builder.ConfigureSyncfusionListView();
 
+		// SfBadgeView
+		builder.ConfigureSyncfusionCore();
 
 #if ANDROID
 		// 전체 배경 색 변경 - 적용가능하나 디자인을 해침
@@ -63,6 +66,8 @@ public static class MauiProgram
 #endif
 			}
 		});
+
+
 
 		return builder.Build();
 	}

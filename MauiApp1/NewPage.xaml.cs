@@ -25,4 +25,14 @@ public partial class NewPage : ContentPage
     {
         Navigation.PushAsync(new TestView());
     }
+
+    private void sfTestButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SfTestView());
+    }
+    
+    private void sfTestButton_Clicked()
+    {
+
+    }
 }

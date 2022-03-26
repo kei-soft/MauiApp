@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiApp1.SfTestView"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:MauiApp1.Defines"
+             xmlns:syncfusionCore="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             Title="SfTestView"
+             BackgroundColor="White">
+
+    <StackLayout Margin="10">
+        <Label Text ="SfBadgeView" VerticalTextAlignment="Center" FontSize="18"/>
+
+        <syncfusionCore:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20" Margin="5">
+            <syncfusionCore:SfBadgeView.Content>
+                <Button Text="Primary" WidthRequest="200"  HeightRequest="60" HorizontalOptions="Center"/>
+            </syncfusionCore:SfBadgeView.Content>
+            <syncfusionCore:SfBadgeView.BadgeSettings>
+                <syncfusionCore:BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif" Stroke="Blue" BorderWidth="2" Type="Info" CornerRadius="5,5,5,5" Position="BottomRight">
+                </syncfusionCore:BadgeSettings>
+            </syncfusionCore:SfBadgeView.BadgeSettings>
+        </syncfusionCore:SfBadgeView>
+
+        <Label Text ="SfEffectsView" VerticalTextAlignment="Center" FontSize="18"/>
+        <syncfusionCore:SfEffectsView 
+            Margin="5"
+            TouchDownEffects="Ripple">
+            <Label Text ="Ripple" HeightRequest="60" VerticalTextAlignment="Center"></Label>
+        </syncfusionCore:SfEffectsView>
+
+        <syncfusionCore:SfEffectsView 
+            Margin="5"
+            TouchDownEffects="Rotation"
+            Angle="180">
+            <Label Text ="Rotation" HeightRequest="60" VerticalTextAlignment="Center"></Label>
+        </syncfusionCore:SfEffectsView>
+        
+        <syncfusionCore:SfEffectsView 
+            Margin="5"
+            LongPressEffects="Selection"
+            SelectionBackground="skyblue">
+            <Label Text ="LongPress Selection" HeightRequest="60" VerticalTextAlignment="Center"></Label>
+        </syncfusionCore:SfEffectsView>
+
+        <syncfusionCore:SfEffectsView 
+            Margin="5"
+            TouchDownEffects="Ripple,Rotation"
+            Angle="180">
+            <Label Text ="Rotation" HeightRequest="60" VerticalTextAlignment="Center"></Label>
+        </syncfusionCore:SfEffectsView>
+
+
+    </StackLayout>
+    
+    
+</ContentPage>
